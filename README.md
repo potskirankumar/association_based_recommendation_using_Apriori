@@ -13,13 +13,13 @@ As mentioned above, we need recommendation system or recommender to personalize 
 
 Let’s give another example here, on Facebook, there may be some tab or navigation that says People You May Know (I forget the actual words), this is another recommendation from Facebook. Also, when we watch a video like mukbang or some funny videos, Facebook will try to provide relevant contents. So, Facebook uses recommendation system.
 
-In this article, the recommendation system here is built based on association rule. However, this system in this article is mostly based on data mining because the system focuses on pattern discovered in the users’ transactions (for future aspects, please read the Future aspects at the last part of this article). In this system, I manually add the items and some other data of customers. The customers are given with customer id. There are 100 customers and 100 transactions. Readers can use another dataset or some other data.
+The recommendation system here is built based on association rule. However, this system in this article is mostly based on data mining because the system focuses on pattern discovered in the users’ transactions (for future aspects, please read the Future aspects at the last part of this article). In this system, I manually add the items and some other data of customers. The customers are given with customer id. There are 100 customers and 100 transactions. Readers can use another dataset or some other data.
 
 Recommendation system is important because it helps the users to discover products or services or contents that they might not have found and they might have interest in. The system uses users’ past behaviors and preferences which leads to users’ satisfaction, engagement, etc.
 
 Note: Association rule in data mining and unsupervised machine learning can be used interchangeably and also related, but they are slightly different based on some context.
 
-Association Rule
+Association Rule:
 Association rule is a technique that can be used to find the relationships, patterns or associations between variables or data items of a large dataset. This technique is widely used in market basket analysis, fraud detection, recommendation system, etc.
 
 The association rule is like “if-then” control statement. In a store, people use to buy bread, milk, cereal, vegetable, etc. if 80% of people buy milk, then there is a high chance of buying cereal (just an example). Also, if you or a user watched Extraction (movie, mentioned above), then there is a chance that you will watch Polar (another movie).
@@ -60,7 +60,7 @@ Or Lift = Confidence / Support of Y.
 
 Lift is greater than 1, means strong relationship and Y has more likelihood to occur. Lift is smaller than 1, means weak relationship and Y has less likelihood to occur. Lift is 1, means X and Y are not affecting each other.
 
-Apriori Algorithm
+Apriori Algorithm:
 Apriori algorithm was first introduced by Rakesh Agrawal and Ramakrishnan Srikant in 1994 in a paper called Fast Algorithms for Mining Association Rules [1] (I am adding [1] because I am going to use the ideas proposed in this paper, and saying I used this paper as a reference in explaining Apriori algorithm).
 
 Apriori algorithm is a widely used data mining technique for finding frequent itemsets and generating association rules. It is also treated as an unsupervised machine learning algorithm. This algorithm acknowledges the prior knowledge of frequent itemsets that this algorithm uses in dataset.
@@ -91,7 +91,7 @@ Step 4: Evaluate using metrics like confidence and lift.
 
 The algorithm above is from the original paper. And one important point here is the Apriori property that is if an itemset (non-empty) is frequent, then all its subsets must also be frequent.
 
-#Building
+#Building.
 
 I used mlxtend version 0.23.1, mlxtend is a python library which provides tools and utilities for data science. Using mlxtend, I used Apriori algorithm which is a predefined in the library.
 
